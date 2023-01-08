@@ -44,15 +44,7 @@ deft = '.'
 wordsearch = [[deft for _ in range(n)] for _ in range(n)]
 
 def get_string():
-    # return "\n".join([" ".join(row) for row in wordsearch])
     return pd.DataFrame(wordsearch).to_html()
-    # code = "<table>"
-    # for row in wordsearch:
-    #     code += "<tr>"
-    #         for i in row:
-
-    #     code += "</tr>"
-    # join([" ".join(row) for row in wordsearch])
 
 def display():
     print(get_string())
@@ -190,16 +182,3 @@ with open("output.html", "w", encoding="utf-8") as f:
     f.write("<br>\n".join(words))
     f.write("<br><br><h1>Answer:</h1><br><br>")
     f.write(answer)
-
-
-# for i in range(n):
-#     for j in range(n):
-#         if wordsearch[i][j] == 
-
-
-# a = ["a","b","c"]
-# print(" ".join(a))
-
-# for w in words:
-#     for c in list(grapheme_clusters(w)):
-#         print(w, c)
